@@ -1,0 +1,42 @@
+#githubr-outer-container {
+  position: relative;
+  margin: 0px !important;
+
+  width: 0px;
+  height: 32px;
+}
+
+#githubr-inner-container {
+  position: absolute;
+  top: 0px;
+  left: 32px;
+
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#githubr-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #BBBBBB;
+}
+
+#githubr-badge.warn {
+  background-color: #CC0000;
+}
+
+#githubr-badge.error {
+  background-color: #CC00CC;
+}

@@ -1,0 +1,43 @@
+{
+  "manifest_version": 2,
+  "name": "githubr?",
+  "version": "0.1",
+  "description": "Show the list of GitHub pending reviews on BMO.",
+
+  "permissions": [
+    "storage",
+    "https://bugzilla.mozilla.org/*",
+    "https://api.github.com/*"
+  ],
+
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://bugzilla.mozilla.org/*"
+      ],
+      "js": [
+        "githubr.js"
+      ],
+      "css": [
+        "githubr.css"
+      ]
+    }
+  ],
+
+  "options_ui": {
+    "page": "options.html"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "githubr@unmht.org",
+      "strict_min_version": "62.0"
+    }
+  }
+}
