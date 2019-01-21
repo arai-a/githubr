@@ -1,4 +1,4 @@
-#githubr-outer-container {
+#hubr-outer-container {
   position: relative;
   margin: 0px !important;
 
@@ -6,7 +6,7 @@
   height: 32px;
 }
 
-#githubr-inner-container {
+#hubr-inner-container {
   position: absolute;
   top: 0px;
   left: 32px;
@@ -20,7 +20,7 @@
   align-items: center;
 }
 
-#githubr-badge {
+#hubr-badge {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,10 +33,10 @@
   background-color: #BBBBBB;
 }
 
-#githubr-badge.warn {
+#hubr-badge.warn {
   background-color: #CC0000;
 }
 
-#githubr-badge.error {
+#hubr-badge.error {
   background-color: #CC00CC;
 }

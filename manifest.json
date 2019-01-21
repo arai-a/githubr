@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "githubr?",
+  "name": "hubr?",
   "version": "0.1",
   "description": "Show the list of GitHub pending reviews on BMO.",
 
@@ -22,10 +22,10 @@
         "https://bugzilla.mozilla.org/*"
       ],
       "js": [
-        "githubr.js"
+        "hubr.js"
       ],
       "css": [
-        "githubr.css"
+        "hubr.css"
       ]
     }
   ],
@@ -36,7 +36,7 @@
 
   "applications": {
     "gecko": {
-      "id": "githubr@unmht.org",
+      "id": "hubr@unmht.org",
       "strict_min_version": "62.0"
     }
   }

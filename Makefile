@@ -1,9 +1,9 @@
 all:
-	rm -f githubr.xpi
-	zip -9 githubr.xpi background.js githubr.js githubr.css options.html options.js manifest.json
+	rm -f hubr.xpi
+	zip -9 hubr.xpi background.js hubr.js hubr.css options.html options.js manifest.json
 
 i: all
-	open -a FirefoxNightly githubr.xpi
+	open -a FirefoxNightly hubr.xpi
 
 ia: all
-	open -a FirefoxAurora githubr.xpi
+	open -a FirefoxAurora hubr.xpi

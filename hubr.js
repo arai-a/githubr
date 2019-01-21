@@ -6,12 +6,12 @@ function bugURL(bugnumber) {
 }
 
 async function onResponse(accountNode, message) {
-  const innerContainer = document.getElementById("githubr-inner-container");
+  const innerContainer = document.getElementById("hubr-inner-container");
 
   const revs = message.revs;
   const username = message.username;
 
-  const badge = document.getElementById("githubr-badge");
+  const badge = document.getElementById("hubr-badge");
   if (revs) {
     if (revs.length > 0) {
       badge.className = "warn";
@@ -27,7 +27,7 @@ async function onResponse(accountNode, message) {
   }
 
   const menu = document.createElement("section");
-  menu.id = "githubr-menu";
+  menu.id = "hubr-menu";
   menu.className = "dropdown-content dropdown-panel left";
   menu.setAttribute("role", "menu");
   menu.style.display = "none";
@@ -127,7 +127,7 @@ async function onResponse(accountNode, message) {
   allLink.textContent = "Go to profile";
   footerContent.appendChild(allLink);
 
-  const button = document.getElementById("githubr-button");
+  const button = document.getElementById("hubr-button");
   button.addEventListener("click", event => {
     if (event.button != 0) {
       return;
@@ -152,32 +152,32 @@ async function onResponse(accountNode, message) {
 }
 
 function addButton(accountNode) {
-  const prevOuterContainer = document.getElementById("githubr-outer-container");
+  const prevOuterContainer = document.getElementById("hubr-outer-container");
   if (prevOuterContainer) {
     // Remove container from previous version.
     prevOuterContainer.remove();
   }
 
   const outerContainer = document.createElement("div");
-  outerContainer.id = "githubr-outer-container";
+  outerContainer.id = "hubr-outer-container";
 
   const innerContainer = document.createElement("div");
-  innerContainer.id = "githubr-inner-container";
+  innerContainer.id = "hubr-inner-container";
   outerContainer.appendChild(innerContainer);
 
   const button = document.createElement("button");
-  button.id = "githubr-button";
+  button.id = "hubr-button";
   button.className = "dropdown-button minor";
   button.setAttribute("type", "button");
   button.setAttribute("title", "GitHub Review Requests for you");
   button.setAttribute("aria-title", "GitHub Review Requests for you");
   button.setAttribute("aria-expanded", "false");
   button.setAttribute("aria-haspopup", "true");
-  button.setAttribute("aria-controls", "githubr-menu");
+  button.setAttribute("aria-controls", "hubr-menu");
   innerContainer.appendChild(button);
 
   const badge = document.createElement("span");
-  badge.id = "githubr-badge";
+  badge.id = "hubr-badge";
   badge.textContent = "?";
   button.appendChild(badge);
 
